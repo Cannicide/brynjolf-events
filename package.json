@@ -1,7 +1,7 @@
 {
   "name": "@brynjolf/events",
   "version": "0.0.1",
-  "description": "An easy-to-use global event system for Discord.js.",
+  "description": "A powerful, decorator-based event system for Discord.js.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "type": "module",
