@@ -7,7 +7,7 @@ Easily create Discord.js event listeners without needing a Client variable refer
 - 🪶 Lightweight, **zero** dependencies
 - 🍰 Extremely easy to use
 <!-- - 🧩 Fully documented -->
-- New `*` event emitted along all events
+- New events for your convenience
 - 🧠 Built with Typescript, providing great IDE intellisense
 
 ## Get Started
