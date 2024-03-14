@@ -1,13 +1,13 @@
 {
   "name": "@brynjolf/events",
   "version": "0.0.1",
-  "description": "An easy-to-use, efficient Discord.js event handler.",
+  "description": "An easy-to-use global event system for Discord.js.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node ./test/main.js",
+    "test": "npx ts-node --esm ./test/main.ts",
     "deploy": "npm publish --access public",
     "docgen": "npx typedoc"
   },
@@ -20,7 +20,8 @@
     "bot",
     "event",
     "events",
-    "handler",
+    "typescript",
+    "ts",
     "discord.js",
     "djs",
     "cannicide",
@@ -32,11 +33,10 @@
     "url": "https://github.com/Cannicide/brynjolf-events/issues"
   },
   "homepage": "https://github.com/Cannicide/brynjolf-events#readme",
-  "dependencies": {
-  },
   "devDependencies": {
     "@types/node": "^20.11.27",
     "discord.js": "^14.14.1",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.25.12",
     "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.4.2"
