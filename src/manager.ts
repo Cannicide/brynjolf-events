@@ -24,8 +24,23 @@ class EventManager extends EventEmitter {
         Reflect.set(this._client, "_brynjolf_patched", true);
     }
 
-    public emit<Event extends keyof BrynjolfEvents>(eventName: Event, ...args: BrynjolfEvents[Event]): boolean {
+    public override emit<Event extends keyof BrynjolfEvents>(eventName: Event, ...args: BrynjolfEvents[Event]): boolean {
         return super.emit<Event>(eventName, ...args);
+    }
+
+    public override on<Event extends keyof BrynjolfEvents>(eventName: Event, listener: (...args: BrynjolfEvents[Event]) => void): this {
+        super.on(eventName, listener);
+        return this;
+    }
+
+    public override once<Event extends keyof BrynjolfEvents>(eventName: Event, listener: (...args: BrynjolfEvents[Event]) => void): this {
+        super.once(eventName, listener);
+        return this;
+    }
+
+    public override off<Event extends keyof BrynjolfEvents>(eventName: Event, listener: (...args: BrynjolfEvents[Event]) => void): this {
+        super.off(eventName, listener);
+        return this;
     }
 }
 
