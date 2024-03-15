@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/Cannicide/brynjolf-events/issues"
   },
-  "homepage": "https://github.com/Cannicide/brynjolf-events#readme",
+  "homepage": "https://brynjolf.cannicide.net/docs/events/0.0.1/",
   "devDependencies": {
     "@types/node": "^20.11.27",
     "discord.js": "^14.14.1",

@@ -132,6 +132,6 @@ supply it via `events.client()`, just like the above examples.
 For examples, see the quick examples above. They cover most, if 
 not all, of this package's functionality.
 
-[Primary Features →](modules/Members.html)\
-[Typescript Types →](modules/Types.html)\
-[Examples →](#quick-examples)
+[Primary Features →](https://brynjolf.cannicide.net/docs/events/0.0.1/modules/Members.html)\
+[Typescript Types →](https://brynjolf.cannicide.net/docs/events/0.0.1/modules/Types.html)\
+[Examples →](https://brynjolf.cannicide.net/docs/events/0.0.1/#md:quick-examples)
