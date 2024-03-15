@@ -1,5 +1,5 @@
 import type { Client, ClientEvents } from "discord.js";
-import EventEmitter from "events";
+import EventEmitter from "node:events";
 
 interface BrynjolfEvents extends ClientEvents {
     "*": [eventName: keyof ClientEvents, data: any[]];
@@ -31,3 +31,4 @@ class EventManager extends EventEmitter {
 
 const events = new EventManager();
 export default events;
+export { EventManager, BrynjolfEvents };
