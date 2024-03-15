@@ -1,13 +1,8 @@
-import type { AnySelectMenuInteraction, AutocompleteInteraction, ButtonInteraction, Client, ClientEvents, CommandInteraction, Interaction, ModalSubmitInteraction } from "discord.js";
+import type { Client, ClientEvents } from "discord.js";
 import EventEmitter from "events";
 
 interface BrynjolfEvents extends ClientEvents {
     "*": [eventName: keyof ClientEvents, data: any[]];
-    "buttonUse": [interaction: ButtonInteraction];
-    "selectUse": [interaction: AnySelectMenuInteraction];
-    "commandUse": [interaction: CommandInteraction];
-    "modalSubmit": [interaction: ModalSubmitInteraction];
-    "autocomplete": [interaction: AutocompleteInteraction];
 }
 
 class EventManager extends EventEmitter {
@@ -27,15 +22,6 @@ class EventManager extends EventEmitter {
             return emit(event as keyof ClientEvents, ...data);
         };
         Reflect.set(this._client, "_brynjolf_patched", true);
-
-        // Attach new events
-        this._client.on("interactionCreate", (interaction: Interaction) => {
-            if (interaction.isButton()) this.emit("buttonUse", interaction);
-            else if (interaction.isAnySelectMenu()) this.emit("selectUse", interaction);
-            else if (interaction.isCommand()) this.emit("commandUse", interaction);
-            else if (interaction.isModalSubmit()) this.emit("modalSubmit", interaction);
-            else if (interaction.isAutocomplete()) this.emit("autocomplete", interaction);
-        });
     }
 
     public emit<Event extends keyof BrynjolfEvents>(eventName: Event, ...args: BrynjolfEvents[Event]): boolean {
