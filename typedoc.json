@@ -3,6 +3,13 @@
     "out": "./docs",
     "includeVersion": true,
     "excludeInternal": true,
+    "sourceLinkExternal": true,
+    "visibilityFilters": {
+        "protected": false,
+        "private": false,
+        "inherited": true,
+        "external": true
+    },
     "validation": {
         "notDocumented": true,
         "notExported": true
