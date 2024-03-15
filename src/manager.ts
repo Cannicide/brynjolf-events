@@ -91,6 +91,7 @@ class EventManager extends EventEmitter {
     }
 }
 
+/** A global Discord.js event system for \@brynjolf/events. */
 const events = new EventManager();
 export default events;
 export { EventManager, BrynjolfEvents };
