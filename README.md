@@ -1,16 +1,16 @@
 # Brynjolf Events
-Easily create Discord.js event listeners without needing a Client variable 
-reference everytime, in Javascript or Typescript. Also includes a powerful 
-listener decorator system that enables stateful, modular listener creation 
-for Typescript users.
+Easily create Discord.js event listeners without needing a Client 
+variable reference everytime, in Javascript or Typescript. Also 
+includes a powerful listener decorator system that enables stateful, 
+modular listener creation for Typescript users.
 
 ## Features
-- Create Discord.js event listeners without Client
-- Typescript decorators to convert classes into modular listeners
+- 💊 Typescript decorators to convert classes into modular listeners
+- 🪩 Create Discord.js event listeners without Client
 - 🪶 Lightweight, **zero** dependencies
 - 🍰 Extremely easy to use
-<!-- - 🧩 Fully documented -->
-- New `*` event emitted alongside all other events
+- 🧩 Fully documented
+- ⭐ New `*` event emitted alongside all other events
 - 🧠 Built with Typescript, providing great IDE intellisense
 
 ## Get Started
@@ -20,13 +20,13 @@ for Typescript users.
 
 ## Quick Examples
 ### Modular Listeners
-> **Requires Typescript >= v5**
+> **⚠️ Requires Typescript >= v5**
 
-Using the power of decorators, you can easily create modular 
-classes to handle events. A class can handle any number of events.
-The events are only handled once the class is constructed into an object. 
-Unfortunately, Javascript does not officially support decorators yet, so 
-this is a Typescript-only feature for the moment.
+Using the power of decorators, you can easily create modular classes 
+to handle events. A class can handle any number of events. The events 
+are only handled once the class is constructed into an object. 
+Unfortunately, Javascript does not officially support decorators yet, 
+so this is a Typescript-only feature for the moment.
 
 approver_example.ts:
 ```ts
@@ -65,7 +65,7 @@ events.client(client);
 ```
 
 ### No-Client Listeners
-> **Works in Javascript or Typescript**
+> **✅ Works in Javascript or Typescript**
 
 Easily create event listeners without needing an immediate reference 
 to a `Client`. Just supply a `Client` once in your main file, and all 
@@ -101,7 +101,7 @@ events.client(client);
 ```
 
 ### All Event
-> **Works in Javascript or Typescript**
+> **✅ Works in Javascript or Typescript**
 
 The all (`*`) event is emitted when any other event is emitted, 
 providing you the name of the emitted event and its arguments.
