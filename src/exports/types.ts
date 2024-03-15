@@ -4,4 +4,3 @@
  */
 
 export type { EventManager, BrynjolfEvents } from "../manager.js";
-export type { ClientEvents } from "discord.js";

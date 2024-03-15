@@ -1,7 +1,12 @@
 import type { Client, ClientEvents } from "discord.js";
 import EventEmitter from "node:events";
 
+/**
+ * Extended map of supported Discord.js events
+ * to their event listener parameters.
+ */
 interface BrynjolfEvents extends ClientEvents {
+    /** Global event, emitted when any other event is emitted. */
     "*": [eventName: keyof ClientEvents, data: any[]];
 }
 
